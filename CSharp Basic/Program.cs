@@ -1,6 +1,6 @@
 ﻿/*
- C# Sharp Exercises: Create a new string from a given string
- with the first character added at the front and back
+ Check two given integers and return true if one is negative
+ and one is positive
 */
 
 using System;
@@ -11,18 +11,12 @@ namespace CSharp_Basic
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string: ");
-            string input = Console.ReadLine();
-            if (input.Length == 1)
-            {
-                input = input + input + input;
-            }
-            else
-            {
-                string firstCharacter = input.Substring(0, 1);
-                input = firstCharacter + input + firstCharacter;
-            }
-            Console.WriteLine("Output: " + input);
+            Console.Write("Enter the first integers: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter the second integers: ");
+            int secondnumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Check if one is negative and one is positive:");
+            Console.WriteLine(firstNumber * secondnumber < 0);
             Console.ReadKey();
         }
     }
