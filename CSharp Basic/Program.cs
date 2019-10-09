@@ -1,6 +1,7 @@
 ﻿/*
- Check two given integers and return true if one is negative
- and one is positive
+ Compute the sum of two given integers,
+ if two values are equal then return the
+ triple of their sum
 */
 
 using System;
@@ -11,13 +12,15 @@ namespace CSharp_Basic
     {
         private static void Main(string[] args)
         {
-            Console.Write("Enter the first integers: ");
-            int firstNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter the second integers: ");
-            int secondnumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Check if one is negative and one is positive:");
-            Console.WriteLine(firstNumber * secondnumber < 0);
+            Console.WriteLine(SumTriple(2, 2));
+            Console.WriteLine(SumTriple(12, 10));
+            Console.WriteLine(SumTriple(-5, 2));
             Console.ReadKey();
+        }
+
+        public static int SumTriple(int a, int b)
+        {
+            return a == b ? (a + b) * 3 : a + b;
         }
     }
 }
